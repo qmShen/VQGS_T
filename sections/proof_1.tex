@@ -1,0 +1,64 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tabularborder}
+\usepackage{enumerate}
+\usepackage[colorlinks, urlcolor=black]{hyperref}
+\usepackage{bm}
+
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{proposition}{Proposition}[section]
+%\newtheorem{corollary}{Corollary}[section]
+%\newtheorem{definition}{Definition}[section]
+%\newtheorem{assumption}{Assumption}[section]
+%\newtheorem{claim}{Claim}[section]
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{claim}{Claim}
+
+\leftmargin=0.35in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=0.30in
+
+\title{Proof of Theorem 1}
+
+\author{
+%	\texttt{Email}
+}
+
+\begin{document}
+	
+\maketitle
+
+%\tableofcontents
+
+%\clearpage
+
+\begin{equation}\label{eqref:loss}
+loss(\mathcal{V}, \mathcal{V}')=\frac{|\mathcal{V}-\mathcal{V}'|}{|\mathcal{V}|},
+\end{equation}
+
+\begin{theorem}~\label{the:level}
+	Use~$loss(V(\mathcal{T}), V(\mathcal{R}), l)$ to denote the fidelity loss induced by a sample set $\mathcal{R}$ at zoom level $l$, we have~ $loss(V(\mathcal{T}), V(\mathcal{R}), l) \le loss(V(\mathcal{T}), V(\mathcal{R}), l')$ if $l\le l'$, with larger $l$ indicating higher resolution.
+\end{theorem}
+
+\begin{proof}
+	Denote the value of the pixel at location $(x,y)$ for the visualization result of zoom level $l$ as $p^l(x,y)$, which can be either 0 or 1 in line-based trajectory visualization. Recall that pixels of lower zoom levels are obtained by merging pixels from lower zoom levels with pixel-wise OR. Thus, we have $p^l(x,y)=\vee_{(a,b)\in g(x,y,l,l')} \ p^{l'}(a,b)$, in which  $l\le l'$ and $g(x,y,l,l')$ is the set of pixels in the visualization of zoom level $l'$ that are used to determine $p^l(x,y)$ at zoom level $l$. Use $p^l_{V(\mathcal{S})}(x,y)$ to denote the $p^l(x,y)$ induced by a set $\mathcal{S}$ of sample trajectories, we have 
+	\begin{equation}\nonumber
+	p^l_{V(\mathcal{T})}(x,y)=p^l_{V(\mathcal{R})}(x,y) \ \text{if} \ \exists (a,b)\in g(x,y) \ \text{such that} \ p^{l'}_{V(\mathcal{T})}(x,y)=p^{l'}_{V(\mathcal{R})}(x,y). 
+	\end{equation}      
+	It follows that $loss(V(\mathcal{T}), V(\mathcal{R}), l)=\frac{|V^l(\mathcal{T})-V^l(\mathcal{T})|}{|V^l(\mathcal{T})|}\le \frac{|V^{l'}(\mathcal{T})-V^{l'}(\mathcal{T})|}{|V^{l'}(\mathcal{T})|}=loss(V(\mathcal{T}), V(\mathcal{R}), l')$. 
+	      
+\end{proof}
+
+\end{document}

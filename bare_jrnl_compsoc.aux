@@ -1,0 +1,194 @@
+\relax 
+\citation{wang2014visual,tang2017efficient,zheng2011learning}
+\citation{liu2016smartadp,zheng2010collaborative}
+\citation{chen2015survey,visualanalysis,bigchanvis}
+\citation{sz}
+\citation{shneiderman1984response}
+\citation{kwon2017sampling}
+\citation{qin2020making,DBLP:conf/sigmod/DingHCC016,DBLP:journals/pvldb/KimBPIMR15,park2016visualization}
+\citation{battle2013dynamic}
+\citation{borcan2012improving}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{}\protected@file@percent }
+\newlabel{sec:intro}{{1}{1}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Visualization time on the \textsf  {Porto}{} dataset (in seconds)}}{1}{}\protected@file@percent }
+\newlabel{tab:gpu}{{1}{1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Effectiveness of $\mathsf  {CheetahTraj}$ at overview visualization in \textsf  {Porto}{}.}}{2}{}\protected@file@percent }
+\newlabel{fig:overview}{{1}{2}}
+\citation{chen2015survey}
+\citation{chen2015survey}
+\citation{liu2013vait,yang2016exploring,chae2014public,borruso2008network}
+\citation{guo2009flow,von2015mobilitygraphs}
+\citation{guo2011tripvista,hurter2009fromdady}
+\citation{von2015mobilitygraphs}
+\citation{ferreira2013visual}
+\citation{chan2008maintaining}
+\citation{yang2019vaite}
+\citation{dong2020marviq}
+\citation{wood2010visualisation,guo2009flow,von2015mobilitygraphs}
+\citation{andrienko2008spatio,adrienko2010spatial}
+\citation{battle2013dynamic,rapp2019void,chen2014visual,yu2020turbocharging,park2016visualization,qin2020making,DBLP:conf/sigmod/DingHCC016,DBLP:journals/pvldb/KimBPIMR15}
+\citation{rapp2019void}
+\citation{chen2014visual}
+\citation{yu2020turbocharging}
+\citation{park2016visualization}
+\citation{park2016visualization}
+\citation{zhang2018trajectory,2018arXiv180303550V}
+\citation{borcan2012improving,6851202}
+\citation{chan2008maintaining}
+\citation{piringer2009multi}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background and Related work}{3}{}\protected@file@percent }
+\newlabel{sec:rel}{{2}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Trajectory Visualization Methods}{3}{}\protected@file@percent }
+\newlabel{sec:trajvisana}{{2.1}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Interactive Visualization for Large Datasets}{3}{}\protected@file@percent }
+\newlabel{sec:interactive}{{2.2}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces System architecture for interactive visualization.}}{3}{}\protected@file@percent }
+\newlabel{fig:sys_framework}{{2}{3}}
+\citation{algorithms}
+\citation{fujishige2005submodular}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Illustration of line-based trajectory visualization.}}{4}{}\protected@file@percent }
+\newlabel{fig:line}{{3}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Problem Formulation}{4}{}\protected@file@percent }
+\newlabel{sec:pro}{{3}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Problem Definition}{4}{}\protected@file@percent }
+\newlabel{sec:def}{{3.1}{4}}
+\newlabel{eqref:loss}{{1}{4}}
+\newlabel{prob:def}{{1}{4}}
+\newlabel{eq:opp}{{2}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Hardness Analysis}{4}{}\protected@file@percent }
+\newlabel{sec:hard}{{3.2}{4}}
+\newlabel{eqn:obj2}{{3}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}\textsf  {QOSP}{} Solution}{4}{}\protected@file@percent }
+\newlabel{sec:sol}{{4}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Visual Quality Guaranteed Sampling $\mathsf  {VQGS}$}{4}{}\protected@file@percent }
+\newlabel{sec:greedy}{{4.1}{4}}
+\newlabel{the:ratio}{{1}{4}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces $\mathsf  {VQGS}(\mathcal  {T}, k=\lceil \alpha |\mathcal  {T}| \rceil $)}}{5}{}\protected@file@percent }
+\newlabel{alg:greedy}{{1}{5}}
+\newlabel{line:max}{{3}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Heap-based lazy computation.}}{5}{}\protected@file@percent }
+\newlabel{fig:heap}{{4}{5}}
+\newlabel{lem:submodular}{{1}{5}}
+\newlabel{lem:cost}{{2}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Advanced Approach $\mathsf  {VQGS}^+$}{5}{}\protected@file@percent }
+\newlabel{subsec:VQGS+}{{4.2}{5}}
+\citation{googlemap}
+\citation{kruger2013trajectorylenses}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \textsf  {QOSP}{} solution $\mathsf  {VQGS}^+$ on \textsf  {Porto}{} ($\alpha = 0.5\%, \delta = 64$)}}{6}{}\protected@file@percent }
+\newlabel{fig:delta}{{5}{6}}
+\newlabel{Fig:zoom}{{4.2}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces An illustration of different zoom level.}}{6}{}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {2}{\ignorespaces $\mathsf  {VQGS}^+(\mathcal  {T},k=\lceil \alpha \mathcal  {T} \rceil ,\delta )$}}{6}{}\protected@file@percent }
+\newlabel{alg:plus}{{2}{6}}
+\newlabel{line:deltamax}{{4}{6}}
+\newlabel{line:delta}{{6}{6}}
+\newlabel{line:s}{{7}{6}}
+\newlabel{line:e}{{9}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}The $\mathsf  {CheetahTraj}$ Framework}{6}{}\protected@file@percent }
+\newlabel{sec:cheetahtraj}{{5}{6}}
+\citation{fitts_click}
+\citation{pt}
+\citation{sz}
+\citation{cd}
+\citation{ufmaps}
+\citation{p3}
+\citation{code}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The $\mathsf  {CheetahTraj}$ framework}}{7}{}\protected@file@percent }
+\newlabel{fig:framework}{{7}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Index Building}{7}{}\protected@file@percent }
+\newlabel{sec:index}{{5.1}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Query Processing}{7}{}\protected@file@percent }
+\newlabel{sec:query}{{5.2}{7}}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {3}{\ignorespaces $\mathsf  {Query}$($\mathcal  {Q}$, $\tau $, $\mathsf  {InvQuad}$ node $\mathcal  {N}$, result $\mathcal  {R}$)}}{7}{}\protected@file@percent }
+\newlabel{alg:query}{{3}{7}}
+\newlabel{line:ret}{{2}{7}}
+\newlabel{line:valls}{{3}{7}}
+\newlabel{line:valle}{{6}{7}}
+\newlabel{theorem:quality}{{2}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Experimental Evaluation}{7}{}\protected@file@percent }
+\newlabel{sec:exp}{{6}{7}}
+\citation{borcan2012improving}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Statistics of the datasets used in the experiments}}{8}{}\protected@file@percent }
+\newlabel{tab:dataset}{{2}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Case Study}{8}{}\protected@file@percent }
+\newlabel{sec:case}{{6.1}{8}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.1}Overview visualization}{8}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {6.1.2}Detail visualization}{8}{}\protected@file@percent }
+\newlabel{sec:detail}{{6.1.2}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Case study of the visualization quality of $\mathsf  {CheetahTraj}$ for two detail regions.}}{9}{}\protected@file@percent }
+\newlabel{fig:detailview}{{8}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}User Study}{9}{}\protected@file@percent }
+\newlabel{sec:user}{{6.2}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Quantitative Evaluation}{9}{}\protected@file@percent }
+\newlabel{sec:quality}{{6.3}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces User study results of different visualization methods}}{10}{}\protected@file@percent }
+\newlabel{fig:userstudy}{{9}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Effect of varying sampling rate visual quality.}}{10}{}\protected@file@percent }
+\newlabel{fig:rate_quality}{{10}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Effect of sampling rate on visualization cost.}}{10}{}\protected@file@percent }
+\newlabel{fig:rate_vistime}{{11}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Effect of region size on end-top-end response time.}}{10}{}\protected@file@percent }
+\newlabel{fig:size_responsetime}{{12}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Effect of sampling rate on the sampling cost of $\mathsf  {VQGS}^+$ with/without optimization}}{10}{}\protected@file@percent }
+\newlabel{fig:rate_algtime}{{13}{10}}
+\bibstyle{IEEEtran}
+\bibdata{ref}
+\bibcite{wang2014visual}{1}
+\bibcite{tang2017efficient}{2}
+\bibcite{zheng2011learning}{3}
+\bibcite{liu2016smartadp}{4}
+\bibcite{zheng2010collaborative}{5}
+\bibcite{chen2015survey}{6}
+\bibcite{visualanalysis}{7}
+\bibcite{bigchanvis}{8}
+\bibcite{sz}{9}
+\bibcite{shneiderman1984response}{10}
+\bibcite{kwon2017sampling}{11}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces The cost of $\mathsf  {InvQuad}$-tree index}}{11}{}\protected@file@percent }
+\newlabel{tab:index cost}{{3}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusions}{11}{}\protected@file@percent }
+\newlabel{sec:con}{{7}{11}}
+\@writefile{toc}{\contentsline {section}{References}{11}{}\protected@file@percent }
+\bibcite{qin2020making}{12}
+\bibcite{DBLP:conf/sigmod/DingHCC016}{13}
+\bibcite{DBLP:journals/pvldb/KimBPIMR15}{14}
+\bibcite{park2016visualization}{15}
+\bibcite{battle2013dynamic}{16}
+\bibcite{borcan2012improving}{17}
+\bibcite{liu2013vait}{18}
+\bibcite{yang2016exploring}{19}
+\bibcite{chae2014public}{20}
+\bibcite{borruso2008network}{21}
+\bibcite{guo2009flow}{22}
+\bibcite{von2015mobilitygraphs}{23}
+\bibcite{guo2011tripvista}{24}
+\bibcite{hurter2009fromdady}{25}
+\bibcite{ferreira2013visual}{26}
+\bibcite{chan2008maintaining}{27}
+\bibcite{yang2019vaite}{28}
+\bibcite{dong2020marviq}{29}
+\bibcite{wood2010visualisation}{30}
+\bibcite{andrienko2008spatio}{31}
+\bibcite{adrienko2010spatial}{32}
+\bibcite{rapp2019void}{33}
+\bibcite{chen2014visual}{34}
+\bibcite{yu2020turbocharging}{35}
+\bibcite{zhang2018trajectory}{36}
+\bibcite{2018arXiv180303550V}{37}
+\bibcite{6851202}{38}
+\bibcite{piringer2009multi}{39}
+\bibcite{algorithms}{40}
+\bibcite{fujishige2005submodular}{41}
+\bibcite{googlemap}{42}
+\bibcite{kruger2013trajectorylenses}{43}
+\bibcite{fitts_click}{44}
+\bibcite{pt}{45}
+\bibcite{cd}{46}
+\bibcite{ufmaps}{47}
+\bibcite{p3}{48}
+\bibcite{code}{49}
+\@writefile{toc}{\contentsline {section}{Biographies}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Michael Shell}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{John Doe}{12}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{Jane Doe}{12}{}\protected@file@percent }
+\gdef \@abspage@last{12}

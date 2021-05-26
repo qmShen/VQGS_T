@@ -1,0 +1,34 @@
+\section{Experimental Evaluation}\label{sec:exp}
+
+In this part, we first present a case study of the visualizations provided by $\avats$ in Section~\ref{sec:case} to demonstrate its good visualization quality. In Section~\ref{sec:user}, we conduct a comprehensive user study to compare the visualization quality of different methods. In Section~\ref{sec:quality}, we quantitatively evaluate the visual quality and efficiency of $\avats$ and compare with the baselines.
+
+\begin{table}
+	\centering
+	\small
+	\caption{Statistics of the datasets used in the experiments}
+	\begin{tabular}{|c|c|c|c|c|} \hline
+		Dataset & No. of  & No. of GPS  & Maximum  \\
+                & Trajectories & points & length \\ \hline
+		\pt{}& 2,389,863 & 75,667,503 & 3,490 \\ \hline
+		\sz{}& 3,066,861 & 53,527,890 & 2,268 \\ \hline
+		\cd{}& 2,400,000 & 80,040,361 & 6,468 \\ \hline
+	\end{tabular}	\label{tab:dataset}
+\end{table}
+
+%porto：总条数：2389863，总点数：75667503，最长：3490；  Shenzhen：总条数：3066861，总点数：53527890，最长：2268
+
+\stitle{Experiment Settings} We conduct the experiments
+using 3 real-world trajectory datasets: \pt{}, \sz{} and \cd{}.
+\pt{}~\cite{pt} contains 2.39 million taxi trajectories and 75.67 million of GPS points, and the longest trajectory has 3,490 GPS points.
+\sz{}~\cite{sz} consists of 3.07 million taxi trajectories with 53.53 million GPS points, and the longest trajectory has 2,268 GPS points.
+\cd{}~\cite{cd} has 2.40 million taxi trajectories and 80.04 million GPS points, and the longest trajectory consists of 6,468 GPS points. 
+The statistics of the datasets are summarized in Table~\ref{tab:dataset}. The experiments are conducted on a machine with an Intel i7-8700 CPU, 24 GB memory and an NVIDIA GeForce GTX1080 GPU with 8 GB on-chip memory, running on Windows 10. All methods are implemented using Java 1.8. UnfoldingMap 0.9.92~\cite{ufmaps} is used to provide interactive map and GPS mapping, and the Processing 3 library~\cite{p3} is used for rendering. All timing results are measured in single-thread mode. The datasets and source codes to reproduce our results are available at~\cite{code}.
+
+\stitle{Competitors} We compare $\avats$ with three competitors, i.e., $\mathsf{Full}$, $\mathsf{Random}$ and $\mathsf{DTW}$. $\mathsf{Full}$ visualizes all trajectories in the user selected region while $\mathsf{Random}$ selects trajectories in the user selected region at random for visualization. $\mathsf{DTW}$ is based on the DTW distance between trajectories~\cite{borcan2012improving} and designed by us to select trajectories with good diversity. Specifically, $\mathsf{DTW}$ samples the trajectory that maximizes the aggregate DTW distance to all remaining trajectories in each step. We note that it takes $\mathsf{DTW}$ several days to run on the experiment datasets because it needs to compute expensive DTW distance (quadratic complexity w.r.t. trajectory length) between all trajectory pairs. For fair comparison, we ensure that $\mathsf{Random}$ and $\mathsf{DTW}$ use the same number of trajectories as $\avats$.
+
+
+
+
+\input{sections/Evaluation_case_study.tex}
+\input{sections/Evaluation_user_study.tex}
+\input{sections/Evaluation_quantitative_evaluation.tex}
